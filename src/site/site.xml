@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.8.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd"
+         name="antlr4-autocomplete">
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.9</version>
+  </skin>
+
+  <body>
+    <menu>
+      <item name="Summary" href="summary.html"/>
+      <item name="Dependencies" href="dependencies.html"/>
+      <item name="Licenses" href="licenses.html"/>
+      <item name="Plugins" href="plugins.html"/>
+      <item name="SCM" href="scm.html"/>
+    </menu>
+  </body>
+
+  <custom>
+    <fluidoSkin>
+      <gitHub>
+        <projectId>apache/maven-skins</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>black</ribbonColor>
+      </gitHub>
+      <twitter>
+        <user>kovariadam</user>
+        <showUser>true</showUser>
+        <showFollowers>true</showFollowers>
+      </twitter>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+    </fluidoSkin>
+  </custom>
+</project>

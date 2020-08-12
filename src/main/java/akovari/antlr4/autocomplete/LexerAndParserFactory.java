@@ -1,4 +1,4 @@
-package com.intigua.antlr4.autosuggest;
+package akovari.antlr4.autocomplete;
 
 public interface LexerAndParserFactory extends LexerFactory, ParserFactory {
 }
