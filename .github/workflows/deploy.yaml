@@ -8,7 +8,11 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: Run tests
+        run: mvn -B test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package
-        run: mvn -Pprod -B deploy
+        run: mvn -P prod -B deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
