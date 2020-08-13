@@ -23,7 +23,7 @@
   <custom>
     <fluidoSkin>
       <gitHub>
-        <projectId>apache/maven-skins</projectId>
+        <projectId>akovari/antlr4-autocomplete</projectId>
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>black</ribbonColor>
       </gitHub>
@@ -33,6 +33,7 @@
         <showFollowers>true</showFollowers>
       </twitter>
       <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+      <copyrightClass>pull-right</copyrightClass>
     </fluidoSkin>
   </custom>
 </project>
