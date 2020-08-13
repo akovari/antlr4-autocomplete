@@ -6,8 +6,7 @@ Adam Kovari
 
 To get started, have a look at the unit tests.
 
-image:https://codecov.io/gh/akovari/antlr4-autocomplete/branch/master/graph/badge.svg[link="https://codecov.io/gh/akovari/antlr4-autocomplete"]
-image:https://app.codacy.com/project/badge/Grade/fba79705a70648068f92742a262b38c4["Codacy code quality", link="https://www.codacy.com/manual/kovariadam/antlr4-autocomplete?utm_source=github.com&utm_medium=referral&utm_content=akovari/antlr4-autocomplete&utm_campaign=Badge_Grade"]
+image:https://github.com/akovari/antlr4-autocomplete/workflows/Publish%20package%20to%20GitHub%20Packages/badge.svg[Publish package to GitHub Packages]
 
 == Getting antlr4-autocomplete
 
