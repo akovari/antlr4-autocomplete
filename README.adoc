@@ -1,16 +1,15 @@
-= Java autosuggest engine for ANTLR4 grammars
-Oran Epelbaum
-:groupid: com.intigua
+= Java autocompletion engine for ANTLR4 grammars
+Adam Kovari
+:groupid: akovari
 :version: 0.0.1-SNAPSHOT
 :source-highlighter: pygments
 
 To get started, have a look at the unit tests.
 
-image:https://circleci.com/gh/oranoran/antlr4-autosuggest.svg?style=shield&circle-token=:circle-token[link="https://circleci.com/gh/oranoran/antlr4-autosuggest"]
-image:https://codecov.io/gh/oranoran/antlr4-autosuggest/branch/master/graph/badge.svg[link="https://codecov.io/gh/oranoran/antlr4-autosuggest"]
-image:https://api.codacy.com/project/badge/Grade/496e60ce37e64674a32551590a8135e9[link="https://www.codacy.com/app/oranoran/antlr4-autosuggest?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=oranoran/antlr4-autosuggest&amp;utm_campaign=Badge_Grade"]
+image:https://codecov.io/gh/akovari/antlr4-autocomplete/branch/master/graph/badge.svg[link="https://codecov.io/gh/akovari/antlr4-autocomplete"]
+image:https://app.codacy.com/project/badge/Grade/fba79705a70648068f92742a262b38c4["Codacy code quality", link="https://www.codacy.com/manual/kovariadam/antlr4-autocomplete?utm_source=github.com&utm_medium=referral&utm_content=akovari/antlr4-autocomplete&utm_campaign=Badge_Grade"]
 
-== Getting antlr-autosuggest
+== Getting antlr4-autocomplete
 
 For now, you need to download and build the library from source code.
 We intend to publish into Maven Central soon.
@@ -22,7 +21,8 @@ A - Generating suggestions for a generated grammar
 ```java
 LexerAndParserFactory lexerAndParserfactory = new ReflectionLexerAndParserFactory(
         MyGeneratedLexer.class, MyGeneratedParser.class);
-Collection<String> suggestions = new AutoComplete(lexerAndParserFactory, "Complete this tex").suggestCompletions();
+CompletionResult completions = new AutoComplete(lexerAndParserFactory, "Complete this tex").suggestCompletions();
+Set<String> suggestions = completions.getSuggestions();
 ```
 
 == How It Works
@@ -50,13 +50,9 @@ There are some more subtlties to the algorithm, such as avoiding infinite loops 
 A port of this code is also available https://github.com/oranoran/antlr4-autosuggest-js[in JavaScript], so it can produce auto-complete suggestions in a browser.
 
 == Building
-. Clone the antlr-autosuggest repository.
-. Install Java 8 and Maven if not already available
+. Clone the antlr4-autocomplete repository.
+. Install Java 11 and Maven if not already available
 . Run the command `mvn install`.
 
 == Credits
-Written by Oran Epelbaum at Intigua.
-When starting to write this, studied the following blog posts (though much has changed since):
-
-- https://blog.rapid7.com/2015/06/29/how-to-implement-antlr4-autocomplete/[RAPID7]: How to Implement ANTLR4 Autocomplete
-- https://tomassetti.me/autocompletion-editor-antlr/[TOMASETTI]: Building autocompletion for an editor based on ANTLR by Federico Tomassetti
+Modified version, originally forked from oranoran/antlr4-autosuggest - many thanks for the original implementation.

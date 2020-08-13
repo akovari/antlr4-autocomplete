@@ -1,5 +1,6 @@
-package akovari.antlr4.autocomplete;
+package akovari.antlr4.autocomplete.impl;
 
+import akovari.antlr4.autocomplete.Antlr4Completer;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.Vocabulary;
 import org.antlr.v4.runtime.atn.ATN;
@@ -11,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
-class ParserWrapper {
+public class ParserWrapper {
   private static final Logger logger = Logger.getLogger(Antlr4Completer.class.getName());
   private final Vocabulary lexerVocabulary;
 

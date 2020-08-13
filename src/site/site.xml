@@ -13,6 +13,7 @@
   <body>
     <menu>
       <item name="Summary" href="summary.html"/>
+      <item name="API Docs" href="apidocs/index.html"/>
       <item name="Dependencies" href="dependencies.html"/>
       <item name="Licenses" href="licenses.html"/>
       <item name="Plugins" href="plugins.html"/>

@@ -1,4 +1,4 @@
-package akovari.antlr4.autocomplete;
+package akovari.antlr4.autocomplete.impl;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATNState;
@@ -20,7 +20,7 @@ public class LexerWrapper {
   private final Map<AtomTransition, String> transitionNameCache = new HashMap<>();
   final Map<Triplet<String, ATNState, String>, Set<String>> tokenSuggestionCache = new HashMap<>();
 
-  static class TokenizationResult {
+  public static class TokenizationResult {
     public List<? extends Token> tokens;
     public String untokenizedText = "";
   }

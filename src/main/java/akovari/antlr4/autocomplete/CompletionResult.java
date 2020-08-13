@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Result of the autocomplete engine.
+ */
 public final class CompletionResult {
   private final List<InputToken> tokens;
   private final String untokenizedText;
@@ -15,14 +18,26 @@ public final class CompletionResult {
     this.suggestions = suggestions;
   }
 
+  /**
+   * List of tokens read from the input
+   * @return the list of tokens
+   */
   public List<InputToken> getTokens() {
     return tokens;
   }
 
+  /**
+   * Returns the piece of input that could not be matched as a token. Either an incomplete token, or an invalid input.
+   * @return the not-yet tokenized part of the input
+   */
   public String getUntokenizedText() {
     return untokenizedText;
   }
 
+  /**
+   * Suggestions for the current input.
+   * @return set of suggestions for the provided input
+   */
   public Set<String> getSuggestions() {
     return suggestions;
   }
@@ -51,6 +66,9 @@ public final class CompletionResult {
     return Objects.hash(tokens, untokenizedText, suggestions);
   }
 
+  /**
+   * Input token with a type of the token
+   */
   public static final class InputToken {
     private final String type;
     private final String text;

@@ -1,5 +1,6 @@
-package akovari.antlr4.autocomplete;
+package akovari.antlr4.autocomplete.impl;
 
+import akovari.antlr4.autocomplete.Antlr4Completer;
 import org.antlr.v4.runtime.atn.ATNState;
 import org.antlr.v4.runtime.atn.AtomTransition;
 import org.antlr.v4.runtime.atn.SetTransition;
@@ -14,7 +15,7 @@ import java.util.stream.Collectors;
 /**
  * Given an ATN state and the lexer ATN, suggests auto-completion texts.
  */
-class TokenSuggester {
+public class TokenSuggester {
   private static final Logger logger = Logger.getLogger(Antlr4Completer.class.getName());
 
   private final LexerWrapper lexerWrapper;

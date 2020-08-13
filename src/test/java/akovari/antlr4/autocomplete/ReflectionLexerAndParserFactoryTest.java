@@ -1,5 +1,6 @@
 package akovari.antlr4.autocomplete;
 
+import akovari.antlr4.autocomplete.impl.LexerAndParserFactory;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.Parser;
