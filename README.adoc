@@ -9,9 +9,24 @@ To get started, have a look at the unit tests.
 image:https://github.com/akovari/antlr4-autocomplete/workflows/Publish%20package%20to%20GitHub%20Packages/badge.svg[Publish package to GitHub Packages]
 
 == Getting antlr4-autocomplete
+Add as a maven dependency, using:
 
-For now, you need to download and build the library from source code.
-We intend to publish into Maven Central soon.
+```xml
+<dependency>
+  <groupId>com.github.akovari</groupId>
+  <artifactId>antlr4-autocomplete</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+<dependency>
+```
+
+Provided that you have a following repository enabled:
+
+```xml
+<repository>
+  <id>ossrh</id>
+  <url>https://oss.sonatype.org/content/groups/public/</url>
+</repository>
+```
 
 == Examples
 
