@@ -10,9 +10,16 @@ jobs:
           java-version: 11
       - name: Run tests
         run: mvn -B test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package
-        run: mvn -P prod -B deploy -DskipTests
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn -P prod -B package -DskipTests
+      - name: Nexus Repo Publish
+        uses: sonatype-nexus-community/nexus-repo-github-action@master
+        with:
+          serverUrl: https://oss.sonatype.org
+          username: ${{ secrets.SONATYPE_USERNAME }}
+          password: ${{ secrets.SONATYPE_PASSWORD }}
+          format: maven2
+          repository: maven-releases
+          coordinates: groupId=com.github.akovari artifactId=antlr4-autocomplete version=0.0.1-SNAPSHOT
+          assets: extension=jar
+          filename: ./target/antlr4-autocomplete-0.0.1-SNAPSHOT.jar
