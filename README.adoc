@@ -6,7 +6,7 @@ Adam Kovari
 
 To get started, have a look at the unit tests.
 
-image:https://github.com/akovari/antlr4-autocomplete/workflows/Publish%20package%20to%20GitHub%20Packages/badge.svg[Publish package to GitHub Packages]
+image:https://github.com/akovari/antlr4-autocomplete/workflows/Test/badge.svg[Test]
 
 == Getting antlr4-autocomplete
 Add as a maven dependency, using:
